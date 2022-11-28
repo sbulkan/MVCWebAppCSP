@@ -1,4 +1,5 @@
 ﻿using MVCWebAppCSP.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -39,7 +40,8 @@ namespace MVCWebAppCSP.Controllers
                     if (cspJson == string.Empty)
                         return null;
 
-                    var cspReportModel = System.Text.Json.JsonSerializer.Deserialize<CspReportRequestModel>(cspJson);
+                    var cspReportModel = JsonConvert.DeserializeObject<CspReportRequestModel>(cspJson);
+                    
 
                     //You Can Log model here like
 
