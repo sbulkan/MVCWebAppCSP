@@ -53,6 +53,8 @@ namespace MVCWebAppCSP.Controllers
                         {"ClientIp", GetClientIp() }
                     };
 
+                    //log to db keyvaluepairs
+
                     return cspReportModel;
                 }
             }
